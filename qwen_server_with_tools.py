@@ -356,7 +356,6 @@ class EnhancedAPIHandler(APIHandler):
             prompt_cache=self.prompt_cache.cache,
             draft_model=self.model_provider.draft_model,
             num_draft_tokens=self.num_draft_tokens,
-            max_kv_size=self.max_kv_size,
         ):
             logging.debug(gen_response.text)
             
