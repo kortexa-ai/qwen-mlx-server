@@ -27,7 +27,7 @@ python qwen_server_with_tools.py --model mlx-community/Qwen3-Coder-30B-A3B-Instr
 # With custom chat template for better tool calling
 python qwen_server_with_tools.py \
   --model mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit \
-  --chat-template qwen3_coder_chat_template.jinja
+  --chat-template "$(cat qwen3_coder_chat_template.jinja)"
 
 # With different log level (WARNING for production, DEBUG for development)
 python qwen_server_with_tools.py \
