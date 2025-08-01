@@ -33,6 +33,13 @@ python qwen_server_with_tools.py \
 python qwen_server_with_tools.py \
   --model mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit \
   --log-level WARNING
+
+# With existing LM Studio download
+python qwen_server_with_tools.py \
+  --model ~/.cache/lm-studio/models/mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit \
+  --chat-template "$(cat qwen3_coder_chat_template.jinja)"
+# Note, when entering API details into a tool such as Qwen Code, the model name should be "default_model"
+# to avoid a redownload of the model.
 ```
 
 ## Usage Example
